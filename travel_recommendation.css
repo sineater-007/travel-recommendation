@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('https://www.candorblog.com/wp-content/uploads/2017/05/travel-022-696x392.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.social-bar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景，可选 */
+  padding: 10px 5px;
+  z-index: 999;
+}
+
+.social-bar a {
+  color: white;
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.social-bar a:hover {
+  transform: scale(1.2);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  color: white; /* 为了让文字在背景上更清楚 */
+  text-shadow: 1px 1px 3px black;
+}
+
+button#btnBook {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+nav {
+    background-color: #005a87;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  nav ul li {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #005a87;
+    border-radius: 4px;
+  }
+  
+  #destinationInput {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  #btnSearch,
+  #btnClear {
+    padding: 6px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #btnSearch:hover,
+  #btnClear:hover {
+    background-color: #e65c00;
+  }
+
+  .employee-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .employee-list li {
+    margin-right: 20px;
+  }
+  
+  .employee-list li:last-child {
+    margin-right: 0;
+  }  
+  
+  #contactForm {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: transparent; /* 设置为透明 */
+    border: 1px solid #ccc; /* 保留边框 */
+  }
+  
+  #contactForm button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #contactForm button:hover {
+    background-color: #ff6600;
+  }
+  

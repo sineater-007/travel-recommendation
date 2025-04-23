@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Recommendation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>
+   <nav><h1>Travel Recommendation</h1>
+<ul>
+  <li><a href="./index.html" id="home">Home </a></li>
+  <li><a href="./aboutus.html" id="about">About Us </a></li>
+  <li><a href="./contactus.html" id="contact">Contact Us </a></li>
+  </li>
+</ul>
+</nav>
+<div class="social-bar">
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>  
+<div class="container">
+    <h1>Contact Us</h1>
+  <p>Get in touch</p>
+  <form id="contactForm">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" onclick="thankyou()">Submit</button>
+  </form>
+  <script>
+    function thankyou(){
+        alert('Thank you for contacting us!')
+    }
+  </script>
+</div>
+<script src="./health_analysis.js"></script>
+</body>
+</html>
