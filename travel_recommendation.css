@@ -7,6 +7,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: flex-start; 
 }
 
 .social-bar {
@@ -16,7 +20,7 @@ body {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景，可选 */
+  background-color: rgba(0, 0, 0, 0.5); 
   padding: 10px 5px;
   z-index: 999;
 }
@@ -34,11 +38,12 @@ body {
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 100px 20px;
-  color: white; /* 为了让文字在背景上更清楚 */
+  max-width: 100%;
+  margin: 100px 20px; 
+  padding: 20px;
+  color: white; 
   text-shadow: 1px 1px 3px black;
+  flex: 1; 
 }
 
 button#btnBook {
@@ -53,11 +58,15 @@ button#btnBook {
 nav {
     background-color: #005a87;
     color: white;
-    padding: 10px 20px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 10; 
   }
   
   nav h1 {
@@ -114,6 +123,21 @@ nav {
     background-color: #e65c00;
   }
 
+  .recommendation-container {
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%;
+  padding: 20px;
+}
+
+.recommendation {
+  width: 50%; 
+  padding: 20px;
+  background-color: transparent; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
   .employee-list {
     display: flex;
     list-style: none;
@@ -138,8 +162,8 @@ nav {
     width: 100%;
     margin-bottom: 15px;
     padding: 8px;
-    background-color: transparent; /* 设置为透明 */
-    border: 1px solid #ccc; /* 保留边框 */
+    background-color: transparent; 
+    border: 1px solid #ccc; 
   }
   
   #contactForm button {
@@ -154,3 +178,10 @@ nav {
     background-color: #ff6600;
   }
   
+  .result-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  background-color: #f9f9f9;
+}
