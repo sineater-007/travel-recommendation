@@ -13,9 +13,6 @@ function searchCondition() {
 
         if (input === 'country' || input === 'countries') {
             data.countries.forEach(country => {
-                if (Array.isArray(country.cities) && country.cities.length > 0) {
-                    results.push({ type: 'Country', name: country.name });
-        
                     country.cities.forEach(city => {
                         results.push({
                             type: 'City',
@@ -25,13 +22,12 @@ function searchCondition() {
                             description: city.description
                         });
                     });
-                }
             });
         }
         
 
         else if (input === 'temple' || input === 'temples') {
-            (data.temples || []).forEach(temple => {
+            data.temples.forEach(temple => {
                 results.push({
                     type: 'Temple',
                     name: temple.name,
@@ -42,7 +38,7 @@ function searchCondition() {
         }
 
         else if (input === 'beach' || input === 'beaches') {
-            (data.beaches || []).forEach(beach => {
+            data.beaches.forEach(beach => {
                 results.push({
                     type: 'Beach',
                     name: beach.name,
@@ -54,11 +50,7 @@ function searchCondition() {
 
         else {
             data.countries.forEach(country => {
-                if (country.name.toLowerCase().includes(input)) {
-                    results.push({ type: 'Country', name: country.name });
-                }
-
-                (country.cities || []).forEach(city => {
+                country.cities.forEach(city => {
                     if (city.name.toLowerCase().includes(input)) {
                         results.push({
                             type: 'City',
@@ -71,7 +63,7 @@ function searchCondition() {
                 });
             });
 
-            (data.temples || []).forEach(temple => {
+            data.temples.forEach(temple => {
                 if (temple.name.toLowerCase().includes(input) || temple.description.toLowerCase().includes(input)) {
                     results.push({
                         type: 'Temple',
@@ -82,7 +74,7 @@ function searchCondition() {
                 }
             });
 
-            (data.beaches || []).forEach(beach => {
+            data.beaches.forEach(beach => {
                 if (beach.name.toLowerCase().includes(input) || beach.description.toLowerCase().includes(input)) {
                     results.push({
                         type: 'Beach',
